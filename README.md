@@ -1,4 +1,4 @@
-# SELinux
+# linux-system-roles.selinux
 
 ## Expected functionality
 
@@ -34,7 +34,7 @@ selogin: Manages linux user to SELinux user mapping
 
 The general usage is demonstrated in [selinux-playbook.yml](selinux-playbook.yml) playbook.
 
-### selinux role
+### linux-system-roles.selinux role
 
 This role can be configured using variables as it is described bellow.
 
@@ -42,7 +42,7 @@ This role can be configured using variables as it is described bellow.
 vars:
   [ see bellow ]
 roles:
-  - role: selinux
+  - role: linux-system-roles.selinux
     become: true
 ```
 
