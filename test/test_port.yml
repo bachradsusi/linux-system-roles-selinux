@@ -8,7 +8,7 @@
       - { ports: '22100', proto: 'tcp', setype: 'ssh_port_t', state: 'present' }
 
   roles:
-    - selinux
+    - linux-system-roles.selinux
 
   tasks:
     - include: set_selinux_variables.yml

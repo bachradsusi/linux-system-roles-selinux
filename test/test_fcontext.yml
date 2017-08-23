@@ -8,7 +8,7 @@
       - { target: '/tmp/test_dir(/.*)?', setype: 'user_home_dir_t', ftype: 'd' }
 
   roles:
-    - selinux
+    - linux-system-roles.selinux
 
   tasks:
     - include: set_selinux_variables.yml

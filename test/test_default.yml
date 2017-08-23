@@ -4,7 +4,7 @@
   become: true
 
   roles:
-    - selinux
+    - linux-system-roles.selinux
 
   tasks:
     - name: Gather facts again

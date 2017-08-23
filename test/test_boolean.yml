@@ -9,7 +9,7 @@
       - { name: 'ssh_sysadm_login', state: 'on', persistent: 'yes' }
 
   roles:
-    - selinux
+    - linux-system-roles.selinux
 
   tasks:
     - include: set_selinux_variables.yml

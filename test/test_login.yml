@@ -14,7 +14,7 @@
         name: sar-user
 
   roles:
-    - selinux
+    - linux-system-roles.selinux
 
   tasks:
     - include: set_selinux_variables.yml
