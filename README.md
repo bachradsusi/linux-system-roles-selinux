@@ -26,10 +26,6 @@ command.
 [seport](http://docs.ansible.com/ansible/seport_module.html): Manages SELinux
 network port type definitions.
 
-### Modules provided by this repository
-
-selogin: Manages linux user to SELinux user mapping
-
 ## Usage
 
 The general usage is demonstrated in [selinux-playbook.yml](selinux-playbook.yml) playbook.
