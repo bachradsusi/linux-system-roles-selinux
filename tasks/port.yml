@@ -1,0 +1,17 @@
+- name: Set an SELinux label on a port
+  vars:
+    local: "{{ item.local | default(false) }}"
+  seport:
+    ports: "{{ item.ports }}"
+    proto: "{{ item.proto | default('tcp') }}"
+    setype: "{{ item.setype }}"
+    state: "{{ item.state | default('present') }}"
+  when: not local
+
+- name: Set an SELinux label on a port only in local store
+  vars:
+    local: "{{ item.local | default(false) }}"
+  ansible.builtin.script:
+    cmd: local_seport.py {{ item.ports }} {{ item.proto | default('tcp') }} {{ item.setype }} {{ item.state | default('present') }}
+    executable: python3
+  when: local
